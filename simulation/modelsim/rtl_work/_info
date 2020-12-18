@@ -1,0 +1,391 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/simulation/modelsim
+Ebancoregistrador
+Z1 w1604457160
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z6 8C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd
+Z7 FC:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd
+l0
+L5
+V51SUHITYG^?;CJkE[Uo1=0
+!s100 d?U67?FRMIYX]KBSjWhnh1
+Z8 OV;C;10.5b;63
+31
+Z9 !s110 1604602925
+!i10b 1
+Z10 !s108 1604602924.000000
+Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd|
+Z12 !s107 C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd|
+!i113 1
+Z13 o-93 -work work
+Z14 tExplicit 1 CvgOpt 0
+Abehaviorbanco
+R2
+R3
+R4
+R5
+DEx4 work 16 bancoregistrador 0 22 51SUHITYG^?;CJkE[Uo1=0
+l18
+L16
+VS]Zd^WfUTg:EeVo`U[:`b3
+!s100 jAKg?MUc0nJo:cGQo^5:?2
+R8
+31
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Ecpu
+Z15 w1604456628
+R2
+R3
+R4
+R5
+R0
+Z16 8C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/cpu.vhd
+Z17 FC:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/cpu.vhd
+l0
+L5
+VRmXI7SHg;7TfVKYm:O=Nl3
+!s100 AgK;9R7eaVHe<8FQ34D4Z2
+R8
+31
+Z18 !s110 1604602924
+!i10b 1
+R10
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/cpu.vhd|
+Z20 !s107 C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/cpu.vhd|
+!i113 1
+R13
+R14
+Alogicfunction
+R2
+R3
+R4
+R5
+DEx4 work 3 cpu 0 22 RmXI7SHg;7TfVKYm:O=Nl3
+l108
+L11
+V6BGEG2Q]E]@gg1cGVKo[g1
+!s100 GknI9k52:@I@A72P@5fk^3
+R8
+31
+R18
+!i10b 1
+R10
+R19
+R20
+!i113 1
+R13
+R14
+Edatamemory
+Z21 w1604602851
+R2
+R3
+Z22 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R4
+R5
+R0
+Z23 8C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/DataMemory.vhd
+Z24 FC:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/DataMemory.vhd
+l0
+L6
+VLBhcg]m9L3RO;mH8ZR<_i3
+!s100 jUC5@CVzV<jnVU^PG_2Jc1
+R8
+31
+Z25 !s110 1604602923
+!i10b 1
+Z26 !s108 1604602923.000000
+Z27 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/DataMemory.vhd|
+Z28 !s107 C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/DataMemory.vhd|
+!i113 1
+R13
+R14
+Adataarchitecture
+R2
+R3
+R22
+R4
+R5
+DEx4 work 10 datamemory 0 22 LBhcg]m9L3RO;mH8ZR<_i3
+l17
+L13
+VH[IghXcd=JC;J;O^U<[CS2
+!s100 ?T>jF_=62f=bhP5292J9Y0
+R8
+31
+R25
+!i10b 1
+R26
+R27
+R28
+!i113 1
+R13
+R14
+Emux2
+Z29 w1604456977
+R2
+R3
+R4
+R5
+R0
+Z30 8C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux2.vhd
+Z31 FC:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux2.vhd
+l0
+L5
+Vb0UYYT1b5V7g0E?JLh8JL3
+!s100 <=FQk1lPIHzMVEI76@`U=0
+R8
+31
+R25
+!i10b 1
+Z32 !s108 1604602922.000000
+Z33 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux2.vhd|
+Z34 !s107 C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux2.vhd|
+!i113 1
+R13
+R14
+Alogicfunction
+R2
+R3
+R4
+R5
+DEx4 work 4 mux2 0 22 b0UYYT1b5V7g0E?JLh8JL3
+l13
+L12
+VKY?TBPBUHG320bNMS0CNH3
+!s100 lYlFKnKHnaXn9jcPdk7Qo0
+R8
+31
+R25
+!i10b 1
+R32
+R33
+R34
+!i113 1
+R13
+R14
+Emux4
+Z35 w1604173280
+R2
+R3
+R4
+R5
+R0
+Z36 8C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux4.vhd
+Z37 FC:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux4.vhd
+l0
+L5
+VUT5FFOUF9D>MM;Q:PgHak0
+!s100 <PdSK^Qi]=[RY`>8fg@900
+R8
+31
+Z38 !s110 1604602922
+!i10b 1
+R32
+Z39 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux4.vhd|
+Z40 !s107 C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux4.vhd|
+!i113 1
+R13
+R14
+Alogicfunction
+R2
+R3
+R4
+R5
+DEx4 work 4 mux4 0 22 UT5FFOUF9D>MM;Q:PgHak0
+l13
+L12
+VN_gFoA_3^jdzJL@^Z3Gnm0
+!s100 ?PKR>X_Of@VOn:B@S0>Io1
+R8
+31
+R38
+!i10b 1
+R32
+R39
+R40
+!i113 1
+R13
+R14
+Eregister16
+Z41 w1604454711
+R4
+R5
+R0
+Z42 8C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register16.vhd
+Z43 FC:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register16.vhd
+l0
+L4
+VohceMloZ6zVj=Pb3BJ3e00
+!s100 85G_d?Fmig;P:ao3:PWGS2
+R8
+31
+Z44 !s110 1604602921
+!i10b 1
+Z45 !s108 1604602921.000000
+Z46 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register16.vhd|
+Z47 !s107 C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register16.vhd|
+!i113 1
+R13
+R14
+Alogicfunction
+R4
+R5
+DEx4 work 10 register16 0 22 ohceMloZ6zVj=Pb3BJ3e00
+l14
+L12
+VX;P8R9iogRAkc2bZQi3VP0
+!s100 42nXI]5[IG;o7l__kT?QT2
+R8
+31
+R44
+!i10b 1
+R45
+R46
+R47
+!i113 1
+R13
+R14
+Eregister8
+Z48 w1604457318
+R4
+R5
+R0
+Z49 8C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register8.vhd
+Z50 FC:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register8.vhd
+l0
+L4
+VWGIj<4n^QjkTGMVkDAzPf2
+!s100 ]R:AVz4Y;Z4he:fBBSHd91
+R8
+31
+R44
+!i10b 1
+Z51 !s108 1604602920.000000
+Z52 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register8.vhd|
+Z53 !s107 C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register8.vhd|
+!i113 1
+R13
+R14
+Alogicfunction
+R4
+R5
+DEx4 work 9 register8 0 22 WGIj<4n^QjkTGMVkDAzPf2
+l14
+L12
+V[<K_G_zXb7GZ?Nd^2z:QC2
+!s100 7e5bW:eKT=Q8ZMH1;P3Bl0
+R8
+31
+R44
+!i10b 1
+R51
+R52
+R53
+!i113 1
+R13
+R14
+Eula
+Z54 w1604169456
+R2
+Z55 DPx4 ieee 16 std_logic_signed 0 22 C<aanc0R`<LWPSe[JYRP^3
+R4
+R5
+R0
+Z56 8C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/ula.vhd
+Z57 FC:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/ula.vhd
+l0
+L5
+VR_]5i6W9B37L?W]hh8JIm0
+!s100 ]8FJEKjISKUao>0T2jVka1
+R8
+31
+Z58 !s110 1604602920
+!i10b 1
+R51
+Z59 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/ula.vhd|
+Z60 !s107 C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/ula.vhd|
+!i113 1
+R13
+R14
+Alogicfunction
+R2
+R55
+R4
+R5
+DEx4 work 3 ula 0 22 R_]5i6W9B37L?W]hh8JIm0
+l15
+L14
+VOYNgV861;^NXLN2bjmLdM2
+!s100 QNoiQ3T@<]NWmN?LT6=gW3
+R8
+31
+R58
+!i10b 1
+R51
+R59
+R60
+!i113 1
+R13
+R14
+Eunidadecontrol
+Z61 w1604455281
+R2
+R3
+R4
+R5
+R0
+Z62 8C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/UnidadeControl.vhd
+Z63 FC:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/UnidadeControl.vhd
+l0
+L5
+VffLAEXdZVLS>EP8?@YRzQ0
+!s100 Ql<c^TbMg8hS=6KzM5z<83
+R8
+31
+Z64 !s110 1604602919
+!i10b 1
+Z65 !s108 1604602919.000000
+Z66 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/UnidadeControl.vhd|
+Z67 !s107 C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/UnidadeControl.vhd|
+!i113 1
+R13
+R14
+Alogicfunction
+R2
+R3
+R4
+R5
+DEx4 work 14 unidadecontrol 0 22 ffLAEXdZVLS>EP8?@YRzQ0
+l18
+L15
+V_<NTiJMf>eJ8eAP6GUXGL2
+!s100 jM`]>S[6anb0i14dO`2z@3
+R8
+31
+R64
+!i10b 1
+R65
+R66
+R67
+!i113 1
+R13
+R14

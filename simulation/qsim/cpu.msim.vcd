@@ -1,0 +1,1453 @@
+$comment
+	File created using the following command:
+		vcd file cpu.msim.vcd -direction
+$end
+$date
+	Thu Nov 05 16:52:52 2020
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module cpu_vhd_vec_tst $end
+$var wire 1 ! Clock $end
+$var wire 1 " Ri [7] $end
+$var wire 1 # Ri [6] $end
+$var wire 1 $ Ri [5] $end
+$var wire 1 % Ri [4] $end
+$var wire 1 & Ri [3] $end
+$var wire 1 ' Ri [2] $end
+$var wire 1 ( Ri [1] $end
+$var wire 1 ) Ri [0] $end
+$var wire 1 * Rj [7] $end
+$var wire 1 + Rj [6] $end
+$var wire 1 , Rj [5] $end
+$var wire 1 - Rj [4] $end
+$var wire 1 . Rj [3] $end
+$var wire 1 / Rj [2] $end
+$var wire 1 0 Rj [1] $end
+$var wire 1 1 Rj [0] $end
+$var wire 1 2 Rk [7] $end
+$var wire 1 3 Rk [6] $end
+$var wire 1 4 Rk [5] $end
+$var wire 1 5 Rk [4] $end
+$var wire 1 6 Rk [3] $end
+$var wire 1 7 Rk [2] $end
+$var wire 1 8 Rk [1] $end
+$var wire 1 9 Rk [0] $end
+$var wire 1 : Rx [7] $end
+$var wire 1 ; Rx [6] $end
+$var wire 1 < Rx [5] $end
+$var wire 1 = Rx [4] $end
+$var wire 1 > Rx [3] $end
+$var wire 1 ? Rx [2] $end
+$var wire 1 @ Rx [1] $end
+$var wire 1 A Rx [0] $end
+
+$scope module i1 $end
+$var wire 1 B gnd $end
+$var wire 1 C vcc $end
+$var wire 1 D unknown $end
+$var wire 1 E devoe $end
+$var wire 1 F devclrn $end
+$var wire 1 G devpor $end
+$var wire 1 H ww_devoe $end
+$var wire 1 I ww_devclrn $end
+$var wire 1 J ww_devpor $end
+$var wire 1 K ww_Clock $end
+$var wire 1 L ww_Ri [7] $end
+$var wire 1 M ww_Ri [6] $end
+$var wire 1 N ww_Ri [5] $end
+$var wire 1 O ww_Ri [4] $end
+$var wire 1 P ww_Ri [3] $end
+$var wire 1 Q ww_Ri [2] $end
+$var wire 1 R ww_Ri [1] $end
+$var wire 1 S ww_Ri [0] $end
+$var wire 1 T ww_Rj [7] $end
+$var wire 1 U ww_Rj [6] $end
+$var wire 1 V ww_Rj [5] $end
+$var wire 1 W ww_Rj [4] $end
+$var wire 1 X ww_Rj [3] $end
+$var wire 1 Y ww_Rj [2] $end
+$var wire 1 Z ww_Rj [1] $end
+$var wire 1 [ ww_Rj [0] $end
+$var wire 1 \ ww_Rk [7] $end
+$var wire 1 ] ww_Rk [6] $end
+$var wire 1 ^ ww_Rk [5] $end
+$var wire 1 _ ww_Rk [4] $end
+$var wire 1 ` ww_Rk [3] $end
+$var wire 1 a ww_Rk [2] $end
+$var wire 1 b ww_Rk [1] $end
+$var wire 1 c ww_Rk [0] $end
+$var wire 1 d ww_Rx [7] $end
+$var wire 1 e ww_Rx [6] $end
+$var wire 1 f ww_Rx [5] $end
+$var wire 1 g ww_Rx [4] $end
+$var wire 1 h ww_Rx [3] $end
+$var wire 1 i ww_Rx [2] $end
+$var wire 1 j ww_Rx [1] $end
+$var wire 1 k ww_Rx [0] $end
+$var wire 1 l \BancoReg|Mux33~1clkctrl_INCLK_bus\ [3] $end
+$var wire 1 m \BancoReg|Mux33~1clkctrl_INCLK_bus\ [2] $end
+$var wire 1 n \BancoReg|Mux33~1clkctrl_INCLK_bus\ [1] $end
+$var wire 1 o \BancoReg|Mux33~1clkctrl_INCLK_bus\ [0] $end
+$var wire 1 p \BancoReg|process_0~0clkctrl_INCLK_bus\ [3] $end
+$var wire 1 q \BancoReg|process_0~0clkctrl_INCLK_bus\ [2] $end
+$var wire 1 r \BancoReg|process_0~0clkctrl_INCLK_bus\ [1] $end
+$var wire 1 s \BancoReg|process_0~0clkctrl_INCLK_bus\ [0] $end
+$var wire 1 t \BancoReg|Mux33~0clkctrl_INCLK_bus\ [3] $end
+$var wire 1 u \BancoReg|Mux33~0clkctrl_INCLK_bus\ [2] $end
+$var wire 1 v \BancoReg|Mux33~0clkctrl_INCLK_bus\ [1] $end
+$var wire 1 w \BancoReg|Mux33~0clkctrl_INCLK_bus\ [0] $end
+$var wire 1 x \RegInst|process_0~0clkctrl_INCLK_bus\ [3] $end
+$var wire 1 y \RegInst|process_0~0clkctrl_INCLK_bus\ [2] $end
+$var wire 1 z \RegInst|process_0~0clkctrl_INCLK_bus\ [1] $end
+$var wire 1 { \RegInst|process_0~0clkctrl_INCLK_bus\ [0] $end
+$var wire 1 | \Clock~inputclkctrl_INCLK_bus\ [3] $end
+$var wire 1 } \Clock~inputclkctrl_INCLK_bus\ [2] $end
+$var wire 1 ~ \Clock~inputclkctrl_INCLK_bus\ [1] $end
+$var wire 1 !! \Clock~inputclkctrl_INCLK_bus\ [0] $end
+$var wire 1 "! \BancoReg|R0[7]~0clkctrl_INCLK_bus\ [3] $end
+$var wire 1 #! \BancoReg|R0[7]~0clkctrl_INCLK_bus\ [2] $end
+$var wire 1 $! \BancoReg|R0[7]~0clkctrl_INCLK_bus\ [1] $end
+$var wire 1 %! \BancoReg|R0[7]~0clkctrl_INCLK_bus\ [0] $end
+$var wire 1 &! \BancoReg|Mux33~2clkctrl_INCLK_bus\ [3] $end
+$var wire 1 '! \BancoReg|Mux33~2clkctrl_INCLK_bus\ [2] $end
+$var wire 1 (! \BancoReg|Mux33~2clkctrl_INCLK_bus\ [1] $end
+$var wire 1 )! \BancoReg|Mux33~2clkctrl_INCLK_bus\ [0] $end
+$var wire 1 *! \RegAux|process_0~0clkctrl_INCLK_bus\ [3] $end
+$var wire 1 +! \RegAux|process_0~0clkctrl_INCLK_bus\ [2] $end
+$var wire 1 ,! \RegAux|process_0~0clkctrl_INCLK_bus\ [1] $end
+$var wire 1 -! \RegAux|process_0~0clkctrl_INCLK_bus\ [0] $end
+$var wire 1 .! \Ri[0]~output_o\ $end
+$var wire 1 /! \Ri[1]~output_o\ $end
+$var wire 1 0! \Ri[2]~output_o\ $end
+$var wire 1 1! \Ri[3]~output_o\ $end
+$var wire 1 2! \Ri[4]~output_o\ $end
+$var wire 1 3! \Ri[5]~output_o\ $end
+$var wire 1 4! \Ri[6]~output_o\ $end
+$var wire 1 5! \Ri[7]~output_o\ $end
+$var wire 1 6! \Rj[0]~output_o\ $end
+$var wire 1 7! \Rj[1]~output_o\ $end
+$var wire 1 8! \Rj[2]~output_o\ $end
+$var wire 1 9! \Rj[3]~output_o\ $end
+$var wire 1 :! \Rj[4]~output_o\ $end
+$var wire 1 ;! \Rj[5]~output_o\ $end
+$var wire 1 <! \Rj[6]~output_o\ $end
+$var wire 1 =! \Rj[7]~output_o\ $end
+$var wire 1 >! \Rk[0]~output_o\ $end
+$var wire 1 ?! \Rk[1]~output_o\ $end
+$var wire 1 @! \Rk[2]~output_o\ $end
+$var wire 1 A! \Rk[3]~output_o\ $end
+$var wire 1 B! \Rk[4]~output_o\ $end
+$var wire 1 C! \Rk[5]~output_o\ $end
+$var wire 1 D! \Rk[6]~output_o\ $end
+$var wire 1 E! \Rk[7]~output_o\ $end
+$var wire 1 F! \Rx[0]~output_o\ $end
+$var wire 1 G! \Rx[1]~output_o\ $end
+$var wire 1 H! \Rx[2]~output_o\ $end
+$var wire 1 I! \Rx[3]~output_o\ $end
+$var wire 1 J! \Rx[4]~output_o\ $end
+$var wire 1 K! \Rx[5]~output_o\ $end
+$var wire 1 L! \Rx[6]~output_o\ $end
+$var wire 1 M! \Rx[7]~output_o\ $end
+$var wire 1 N! \Clock~input_o\ $end
+$var wire 1 O! \Clock~inputclkctrl_outclk\ $end
+$var wire 1 P! \ContrUnit|NextStage~19_combout\ $end
+$var wire 1 Q! \ContrUnit|NextStage.mov~q\ $end
+$var wire 1 R! \RegInst|process_0~0_combout\ $end
+$var wire 1 S! \RegInst|process_0~0clkctrl_outclk\ $end
+$var wire 1 T! \DataMem|Mux1~0_combout\ $end
+$var wire 1 U! \DataMem|Mux0~0_combout\ $end
+$var wire 1 V! \ContrUnit|AluSrcA~0_combout\ $end
+$var wire 1 W! \ContrUnit|MemToReg~q\ $end
+$var wire 1 X! \MuxRegData|output~2_combout\ $end
+$var wire 1 Y! \DataMem|Mux4~0_combout\ $end
+$var wire 1 Z! \DataMem|Mux5~0_combout\ $end
+$var wire 1 [! \BancoReg|R0[7]~0_combout\ $end
+$var wire 1 \! \BancoReg|R0[7]~0clkctrl_outclk\ $end
+$var wire 1 ]! \BancoReg|Mux33~1_combout\ $end
+$var wire 1 ^! \BancoReg|Mux33~1clkctrl_outclk\ $end
+$var wire 1 _! \DataMem|Mux4~2_combout\ $end
+$var wire 1 `! \BancoReg|Mux5~0_combout\ $end
+$var wire 1 a! \BancoReg|process_0~0_combout\ $end
+$var wire 1 b! \BancoReg|process_0~0clkctrl_outclk\ $end
+$var wire 1 c! \ContrUnit|RegAuxWrite~q\ $end
+$var wire 1 d! \RegAux|process_0~0_combout\ $end
+$var wire 1 e! \RegAux|process_0~0clkctrl_outclk\ $end
+$var wire 1 f! \MuxUlaA|Mux5~0_combout\ $end
+$var wire 1 g! \MuxUlaA|Mux5~1_combout\ $end
+$var wire 1 h! \BancoReg|Mux33~0_combout\ $end
+$var wire 1 i! \BancoReg|Mux33~0clkctrl_outclk\ $end
+$var wire 1 j! \BancoReg|Mux13~0_combout\ $end
+$var wire 1 k! \MuxUlaB|Mux5~0_combout\ $end
+$var wire 1 l! \ContrUnit|AluControl~0_combout\ $end
+$var wire 1 m! \Alu|Add0~12_combout\ $end
+$var wire 1 n! \Alu|Add0~13_combout\ $end
+$var wire 1 o! \MuxRegData|output~1_combout\ $end
+$var wire 1 p! \BancoReg|Mux6~0_combout\ $end
+$var wire 1 q! \MuxUlaA|Mux6~0_combout\ $end
+$var wire 1 r! \MuxUlaA|Mux6~1_combout\ $end
+$var wire 1 s! \BancoReg|Mux7~0_combout\ $end
+$var wire 1 t! \MuxUlaA|Mux7~0_combout\ $end
+$var wire 1 u! \MuxUlaA|Mux7~1_combout\ $end
+$var wire 1 v! \BancoReg|Mux15~0_combout\ $end
+$var wire 1 w! \MuxUlaB|Mux7~0_combout\ $end
+$var wire 1 x! \Alu|Add0~1_combout\ $end
+$var wire 1 y! \Alu|Add0~3_cout\ $end
+$var wire 1 z! \Alu|Add0~5\ $end
+$var wire 1 {! \Alu|Add0~10\ $end
+$var wire 1 |! \Alu|Add0~14_combout\ $end
+$var wire 1 }! \Alu|Add0~16_combout\ $end
+$var wire 1 ~! \DataMem|Mux2~0_combout\ $end
+$var wire 1 !" \ContrUnit|NextStage~21_combout\ $end
+$var wire 1 "" \ContrUnit|NextStage~22_combout\ $end
+$var wire 1 #" \ContrUnit|NextStage.exec~q\ $end
+$var wire 1 $" \ContrUnit|WideOr4~combout\ $end
+$var wire 1 %" \ContrUnit|NextStage.complete~q\ $end
+$var wire 1 &" \ContrUnit|RegWrite~0_combout\ $end
+$var wire 1 '" \ContrUnit|RegWrite~q\ $end
+$var wire 1 (" \ContrUnit|NextStage.decode~0_combout\ $end
+$var wire 1 )" \ContrUnit|NextStage.decode~q\ $end
+$var wire 1 *" \ContrUnit|NextStage~18_combout\ $end
+$var wire 1 +" \ContrUnit|NextStage~20_combout\ $end
+$var wire 1 ," \ContrUnit|NextStage.mov_i~q\ $end
+$var wire 1 -" \ContrUnit|AluSrcB~0_combout\ $end
+$var wire 1 ." \BancoReg|Mux14~0_combout\ $end
+$var wire 1 /" \MuxUlaB|Mux6~0_combout\ $end
+$var wire 1 0" \Alu|Add0~8_combout\ $end
+$var wire 1 1" \Alu|Add0~9_combout\ $end
+$var wire 1 2" \Alu|Add0~7_combout\ $end
+$var wire 1 3" \Alu|Add0~11_combout\ $end
+$var wire 1 4" \DataMem|Mux4~1_combout\ $end
+$var wire 1 5" \ContrUnit|NextStage~23_combout\ $end
+$var wire 1 6" \ContrUnit|NextStage.exec_i~q\ $end
+$var wire 1 7" \ContrUnit|Selector0~0_combout\ $end
+$var wire 1 8" \Alu|Add0~4_combout\ $end
+$var wire 1 9" \Alu|Add0~0_combout\ $end
+$var wire 1 :" \Alu|Add0~6_combout\ $end
+$var wire 1 ;" \MuxRegData|output~0_combout\ $end
+$var wire 1 <" \BancoReg|Mux4~0_combout\ $end
+$var wire 1 =" \MuxUlaA|Mux4~0_combout\ $end
+$var wire 1 >" \MuxUlaA|Mux4~1_combout\ $end
+$var wire 1 ?" \BancoReg|Mux12~0_combout\ $end
+$var wire 1 @" \MuxUlaB|Mux4~0_combout\ $end
+$var wire 1 A" \Alu|Add0~18_combout\ $end
+$var wire 1 B" \Alu|Add0~15\ $end
+$var wire 1 C" \Alu|Add0~19_combout\ $end
+$var wire 1 D" \Alu|Add0~17_combout\ $end
+$var wire 1 E" \Alu|Add0~21_combout\ $end
+$var wire 1 F" \MuxRegData|output~3_combout\ $end
+$var wire 1 G" \BancoReg|Mux3~0_combout\ $end
+$var wire 1 H" \MuxUlaA|Mux3~0_combout\ $end
+$var wire 1 I" \MuxUlaA|Mux3~1_combout\ $end
+$var wire 1 J" \BancoReg|Mux11~0_combout\ $end
+$var wire 1 K" \MuxUlaB|Mux3~0_combout\ $end
+$var wire 1 L" \Alu|Add0~22_combout\ $end
+$var wire 1 M" \Alu|Add0~23_combout\ $end
+$var wire 1 N" \Alu|Add0~20\ $end
+$var wire 1 O" \Alu|Add0~24_combout\ $end
+$var wire 1 P" \Alu|Add0~26_combout\ $end
+$var wire 1 Q" \MuxRegData|output~4_combout\ $end
+$var wire 1 R" \BancoReg|Mux2~0_combout\ $end
+$var wire 1 S" \MuxUlaA|Mux2~0_combout\ $end
+$var wire 1 T" \MuxUlaA|Mux2~1_combout\ $end
+$var wire 1 U" \BancoReg|Mux10~0_combout\ $end
+$var wire 1 V" \MuxUlaB|Mux2~0_combout\ $end
+$var wire 1 W" \Alu|Add0~27_combout\ $end
+$var wire 1 X" \Alu|Add0~28_combout\ $end
+$var wire 1 Y" \Alu|Add0~25\ $end
+$var wire 1 Z" \Alu|Add0~29_combout\ $end
+$var wire 1 [" \Alu|Add0~31_combout\ $end
+$var wire 1 \" \MuxRegData|output~5_combout\ $end
+$var wire 1 ]" \BancoReg|Mux1~0_combout\ $end
+$var wire 1 ^" \MuxUlaA|Mux1~0_combout\ $end
+$var wire 1 _" \MuxUlaA|Mux1~1_combout\ $end
+$var wire 1 `" \BancoReg|Mux9~0_combout\ $end
+$var wire 1 a" \MuxUlaB|Mux1~0_combout\ $end
+$var wire 1 b" \Alu|Add0~32_combout\ $end
+$var wire 1 c" \Alu|Add0~33_combout\ $end
+$var wire 1 d" \Alu|Add0~30\ $end
+$var wire 1 e" \Alu|Add0~34_combout\ $end
+$var wire 1 f" \Alu|Add0~36_combout\ $end
+$var wire 1 g" \MuxRegData|output~6_combout\ $end
+$var wire 1 h" \BancoReg|Mux0~0_combout\ $end
+$var wire 1 i" \MuxUlaA|Mux0~0_combout\ $end
+$var wire 1 j" \MuxUlaA|Mux0~1_combout\ $end
+$var wire 1 k" \BancoReg|Mux8~0_combout\ $end
+$var wire 1 l" \MuxUlaB|Mux0~0_combout\ $end
+$var wire 1 m" \Alu|Add0~37_combout\ $end
+$var wire 1 n" \Alu|Add0~38_combout\ $end
+$var wire 1 o" \Alu|Add0~35\ $end
+$var wire 1 p" \Alu|Add0~39_combout\ $end
+$var wire 1 q" \Alu|Add0~41_combout\ $end
+$var wire 1 r" \MuxRegData|output~7_combout\ $end
+$var wire 1 s" \BancoReg|Mux33~2_combout\ $end
+$var wire 1 t" \BancoReg|Mux33~2clkctrl_outclk\ $end
+$var wire 1 u" \BancoReg|R2\ [7] $end
+$var wire 1 v" \BancoReg|R2\ [6] $end
+$var wire 1 w" \BancoReg|R2\ [5] $end
+$var wire 1 x" \BancoReg|R2\ [4] $end
+$var wire 1 y" \BancoReg|R2\ [3] $end
+$var wire 1 z" \BancoReg|R2\ [2] $end
+$var wire 1 {" \BancoReg|R2\ [1] $end
+$var wire 1 |" \BancoReg|R2\ [0] $end
+$var wire 1 }" \DataMem|InstructionOut\ [15] $end
+$var wire 1 ~" \DataMem|InstructionOut\ [14] $end
+$var wire 1 !# \DataMem|InstructionOut\ [13] $end
+$var wire 1 "# \DataMem|InstructionOut\ [12] $end
+$var wire 1 ## \DataMem|InstructionOut\ [11] $end
+$var wire 1 $# \DataMem|InstructionOut\ [10] $end
+$var wire 1 %# \DataMem|InstructionOut\ [9] $end
+$var wire 1 &# \DataMem|InstructionOut\ [8] $end
+$var wire 1 '# \DataMem|InstructionOut\ [7] $end
+$var wire 1 (# \DataMem|InstructionOut\ [6] $end
+$var wire 1 )# \DataMem|InstructionOut\ [5] $end
+$var wire 1 *# \DataMem|InstructionOut\ [4] $end
+$var wire 1 +# \DataMem|InstructionOut\ [3] $end
+$var wire 1 ,# \DataMem|InstructionOut\ [2] $end
+$var wire 1 -# \DataMem|InstructionOut\ [1] $end
+$var wire 1 .# \DataMem|InstructionOut\ [0] $end
+$var wire 1 /# \ContrUnit|AluControl\ [1] $end
+$var wire 1 0# \ContrUnit|AluControl\ [0] $end
+$var wire 1 1# \ContrUnit|AluSrcB\ [1] $end
+$var wire 1 2# \ContrUnit|AluSrcB\ [0] $end
+$var wire 1 3# \ContrUnit|AluSrcA\ [1] $end
+$var wire 1 4# \ContrUnit|AluSrcA\ [0] $end
+$var wire 1 5# \BancoReg|R0\ [7] $end
+$var wire 1 6# \BancoReg|R0\ [6] $end
+$var wire 1 7# \BancoReg|R0\ [5] $end
+$var wire 1 8# \BancoReg|R0\ [4] $end
+$var wire 1 9# \BancoReg|R0\ [3] $end
+$var wire 1 :# \BancoReg|R0\ [2] $end
+$var wire 1 ;# \BancoReg|R0\ [1] $end
+$var wire 1 <# \BancoReg|R0\ [0] $end
+$var wire 1 =# \MuxRegData|output\ [7] $end
+$var wire 1 ># \MuxRegData|output\ [6] $end
+$var wire 1 ?# \MuxRegData|output\ [5] $end
+$var wire 1 @# \MuxRegData|output\ [4] $end
+$var wire 1 A# \MuxRegData|output\ [3] $end
+$var wire 1 B# \MuxRegData|output\ [2] $end
+$var wire 1 C# \MuxRegData|output\ [1] $end
+$var wire 1 D# \MuxRegData|output\ [0] $end
+$var wire 1 E# \BancoReg|R1\ [7] $end
+$var wire 1 F# \BancoReg|R1\ [6] $end
+$var wire 1 G# \BancoReg|R1\ [5] $end
+$var wire 1 H# \BancoReg|R1\ [4] $end
+$var wire 1 I# \BancoReg|R1\ [3] $end
+$var wire 1 J# \BancoReg|R1\ [2] $end
+$var wire 1 K# \BancoReg|R1\ [1] $end
+$var wire 1 L# \BancoReg|R1\ [0] $end
+$var wire 1 M# \BancoReg|R3\ [7] $end
+$var wire 1 N# \BancoReg|R3\ [6] $end
+$var wire 1 O# \BancoReg|R3\ [5] $end
+$var wire 1 P# \BancoReg|R3\ [4] $end
+$var wire 1 Q# \BancoReg|R3\ [3] $end
+$var wire 1 R# \BancoReg|R3\ [2] $end
+$var wire 1 S# \BancoReg|R3\ [1] $end
+$var wire 1 T# \BancoReg|R3\ [0] $end
+$var wire 1 U# \RegInst|Output\ [15] $end
+$var wire 1 V# \RegInst|Output\ [14] $end
+$var wire 1 W# \RegInst|Output\ [13] $end
+$var wire 1 X# \RegInst|Output\ [12] $end
+$var wire 1 Y# \RegInst|Output\ [11] $end
+$var wire 1 Z# \RegInst|Output\ [10] $end
+$var wire 1 [# \RegInst|Output\ [9] $end
+$var wire 1 \# \RegInst|Output\ [8] $end
+$var wire 1 ]# \RegInst|Output\ [7] $end
+$var wire 1 ^# \RegInst|Output\ [6] $end
+$var wire 1 _# \RegInst|Output\ [5] $end
+$var wire 1 `# \RegInst|Output\ [4] $end
+$var wire 1 a# \RegInst|Output\ [3] $end
+$var wire 1 b# \RegInst|Output\ [2] $end
+$var wire 1 c# \RegInst|Output\ [1] $end
+$var wire 1 d# \RegInst|Output\ [0] $end
+$var wire 1 e# \RegAux|Output\ [7] $end
+$var wire 1 f# \RegAux|Output\ [6] $end
+$var wire 1 g# \RegAux|Output\ [5] $end
+$var wire 1 h# \RegAux|Output\ [4] $end
+$var wire 1 i# \RegAux|Output\ [3] $end
+$var wire 1 j# \RegAux|Output\ [2] $end
+$var wire 1 k# \RegAux|Output\ [1] $end
+$var wire 1 l# \RegAux|Output\ [0] $end
+$var wire 1 m# \Alu|Res\ [7] $end
+$var wire 1 n# \Alu|Res\ [6] $end
+$var wire 1 o# \Alu|Res\ [5] $end
+$var wire 1 p# \Alu|Res\ [4] $end
+$var wire 1 q# \Alu|Res\ [3] $end
+$var wire 1 r# \Alu|Res\ [2] $end
+$var wire 1 s# \Alu|Res\ [1] $end
+$var wire 1 t# \Alu|Res\ [0] $end
+$var wire 1 u# \BancoReg|readData1\ [7] $end
+$var wire 1 v# \BancoReg|readData1\ [6] $end
+$var wire 1 w# \BancoReg|readData1\ [5] $end
+$var wire 1 x# \BancoReg|readData1\ [4] $end
+$var wire 1 y# \BancoReg|readData1\ [3] $end
+$var wire 1 z# \BancoReg|readData1\ [2] $end
+$var wire 1 {# \BancoReg|readData1\ [1] $end
+$var wire 1 |# \BancoReg|readData1\ [0] $end
+$var wire 1 }# \MuxUlaB|output\ [7] $end
+$var wire 1 ~# \MuxUlaB|output\ [6] $end
+$var wire 1 !$ \MuxUlaB|output\ [5] $end
+$var wire 1 "$ \MuxUlaB|output\ [4] $end
+$var wire 1 #$ \MuxUlaB|output\ [3] $end
+$var wire 1 $$ \MuxUlaB|output\ [2] $end
+$var wire 1 %$ \MuxUlaB|output\ [1] $end
+$var wire 1 &$ \MuxUlaB|output\ [0] $end
+$var wire 1 '$ \MuxUlaA|output\ [7] $end
+$var wire 1 ($ \MuxUlaA|output\ [6] $end
+$var wire 1 )$ \MuxUlaA|output\ [5] $end
+$var wire 1 *$ \MuxUlaA|output\ [4] $end
+$var wire 1 +$ \MuxUlaA|output\ [3] $end
+$var wire 1 ,$ \MuxUlaA|output\ [2] $end
+$var wire 1 -$ \MuxUlaA|output\ [1] $end
+$var wire 1 .$ \MuxUlaA|output\ [0] $end
+$var wire 1 /$ \PC|Output\ [7] $end
+$var wire 1 0$ \PC|Output\ [6] $end
+$var wire 1 1$ \PC|Output\ [5] $end
+$var wire 1 2$ \PC|Output\ [4] $end
+$var wire 1 3$ \PC|Output\ [3] $end
+$var wire 1 4$ \PC|Output\ [2] $end
+$var wire 1 5$ \PC|Output\ [1] $end
+$var wire 1 6$ \PC|Output\ [0] $end
+$var wire 1 7$ \BancoReg|readData2\ [7] $end
+$var wire 1 8$ \BancoReg|readData2\ [6] $end
+$var wire 1 9$ \BancoReg|readData2\ [5] $end
+$var wire 1 :$ \BancoReg|readData2\ [4] $end
+$var wire 1 ;$ \BancoReg|readData2\ [3] $end
+$var wire 1 <$ \BancoReg|readData2\ [2] $end
+$var wire 1 =$ \BancoReg|readData2\ [1] $end
+$var wire 1 >$ \BancoReg|readData2\ [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0B
+1C
+xD
+1E
+1F
+1G
+1H
+1I
+1J
+0K
+x.!
+x/!
+x0!
+x1!
+x2!
+x3!
+x4!
+x5!
+x6!
+x7!
+x8!
+x9!
+x:!
+x;!
+x<!
+x=!
+x>!
+x?!
+x@!
+xA!
+xB!
+xC!
+xD!
+xE!
+xF!
+xG!
+xH!
+xI!
+xJ!
+xK!
+xL!
+xM!
+0N!
+0O!
+0P!
+0Q!
+0R!
+0S!
+xT!
+xU!
+1V!
+0W!
+xX!
+xY!
+xZ!
+0[!
+0\!
+0]!
+0^!
+x_!
+x`!
+0a!
+0b!
+0c!
+0d!
+0e!
+xf!
+xg!
+0h!
+0i!
+xj!
+xk!
+0l!
+xm!
+xn!
+xo!
+xp!
+xq!
+xr!
+xs!
+xt!
+xu!
+xv!
+xw!
+xx!
+0y!
+xz!
+x{!
+x|!
+x}!
+x~!
+0!"
+0""
+0#"
+0$"
+0%"
+1&"
+0'"
+1("
+0)"
+0*"
+0+"
+0,"
+0-"
+x."
+x/"
+x0"
+x1"
+x2"
+x3"
+x4"
+05"
+06"
+17"
+x8"
+x9"
+x:"
+x;"
+x<"
+x="
+x>"
+x?"
+x@"
+xA"
+xB"
+xC"
+xD"
+xE"
+xF"
+xG"
+xH"
+xI"
+xJ"
+xK"
+xL"
+xM"
+xN"
+xO"
+xP"
+xQ"
+xR"
+xS"
+xT"
+xU"
+xV"
+xW"
+xX"
+xY"
+xZ"
+x["
+x\"
+x]"
+x^"
+x_"
+x`"
+xa"
+xb"
+xc"
+xd"
+xe"
+xf"
+xg"
+xh"
+xi"
+xj"
+xk"
+xl"
+xm"
+xn"
+xo"
+xp"
+xq"
+xr"
+0s"
+0t"
+x"
+x#
+x$
+x%
+x&
+x'
+x(
+x)
+x*
+x+
+x,
+x-
+x.
+x/
+x0
+x1
+x2
+x3
+x4
+x5
+x6
+x7
+x8
+x9
+x:
+x;
+x<
+x=
+x>
+x?
+x@
+xA
+xL
+xM
+xN
+xO
+xP
+xQ
+xR
+xS
+xT
+xU
+xV
+xW
+xX
+xY
+xZ
+x[
+x\
+x]
+x^
+x_
+x`
+xa
+xb
+xc
+xd
+xe
+xf
+xg
+xh
+xi
+xj
+xk
+xu"
+xv"
+xw"
+xx"
+xy"
+xz"
+x{"
+x|"
+0}"
+0~"
+0!#
+x"#
+0##
+0$#
+0%#
+x&#
+x'#
+0(#
+x)#
+x*#
+x+#
+x,#
+x-#
+0.#
+0/#
+00#
+x1#
+02#
+03#
+x4#
+x5#
+x6#
+x7#
+x8#
+x9#
+x:#
+x;#
+x<#
+x=#
+x>#
+x?#
+x@#
+xA#
+xB#
+xC#
+xD#
+xE#
+xF#
+xG#
+xH#
+xI#
+xJ#
+xK#
+xL#
+xM#
+xN#
+xO#
+xP#
+xQ#
+xR#
+xS#
+xT#
+xU#
+xV#
+xW#
+xX#
+xY#
+xZ#
+x[#
+x\#
+x]#
+x^#
+x_#
+x`#
+xa#
+xb#
+xc#
+xd#
+xe#
+xf#
+xg#
+xh#
+xi#
+xj#
+xk#
+xl#
+xm#
+xn#
+xo#
+xp#
+xq#
+xr#
+xs#
+xt#
+xu#
+xv#
+xw#
+xx#
+xy#
+xz#
+x{#
+x|#
+x}#
+x~#
+x!$
+x"$
+x#$
+x$$
+x%$
+x&$
+x'$
+x($
+x)$
+x*$
+x+$
+x,$
+x-$
+x.$
+x/$
+x0$
+x1$
+x2$
+x3$
+x4$
+x5$
+x6$
+x7$
+x8$
+x9$
+x:$
+x;$
+x<$
+x=$
+x>$
+1|
+1}
+1~
+0!!
+1x
+1y
+1z
+0{
+1"!
+1#!
+1$!
+0%!
+1l
+1m
+1n
+0o
+1p
+1q
+1r
+0s
+1*!
+1+!
+1,!
+0-!
+1t
+1u
+1v
+0w
+1&!
+1'!
+1(!
+0)!
+$end
+#1000000
+1!
+1K
+1N!
+1!!
+x[!
+x]!
+1a!
+xh!
+1'"
+1)"
+xs"
+x%!
+xo
+1s
+xw
+x)!
+1R!
+0k!
+1w!
+x!"
+x*"
+0/"
+0@"
+0K"
+0V"
+0a"
+0l"
+0V!
+0[!
+0]!
+0a!
+0h!
+0("
+0s"
+1O!
+1{
+0%!
+0o
+0s
+0w
+0)!
+07"
+xP!
+x+"
+x""
+x5"
+0Y#
+0Z#
+xt"
+xi!
+1b!
+x^!
+x\!
+x~"
+x}"
+x##
+x$#
+x%#
+x(#
+0$$
+1&$
+x!#
+0%$
+x.#
+1/#
+0#$
+0"$
+0!$
+0~#
+0}#
+0t"
+0i!
+0b!
+0^!
+0\!
+1S!
+0n"
+0c"
+0X"
+0M"
+0A"
+0D"
+0L"
+0W"
+0b"
+0m"
+00"
+02"
+1x!
+09"
+0m!
+0n!
+xZ#
+xY#
+#2000000
+0!
+0K
+0N!
+0!!
+0R!
+0{
+0O!
+0S!
+#3000000
+1!
+1K
+1N!
+1!!
+1R!
+1c!
+0)"
+1{
+0R!
+xk!
+xw!
+0!"
+0*"
+x/"
+x@"
+xK"
+xV"
+xa"
+xl"
+1d!
+1O!
+0{
+1-!
+0P!
+0+"
+0""
+05"
+1S!
+xQ!
+x$$
+x&$
+x#"
+x,"
+x%$
+x6"
+0/#
+x#$
+x"$
+x!$
+x~#
+x}#
+1e!
+0S!
+xn"
+xc"
+xX"
+xM"
+xA"
+0}!
+03"
+0:"
+xD"
+0E"
+xL"
+0P"
+xW"
+0["
+xb"
+0f"
+xm"
+0q"
+x0"
+x2"
+xV!
+x-"
+xl!
+x$"
+x7"
+xx!
+x9"
+xm!
+xn!
+x&"
+x}!
+x:"
+x3"
+0m#
+xq"
+0n#
+xf"
+0o#
+x["
+0p#
+xP"
+0q#
+xE"
+0t#
+0s#
+0r#
+0X!
+0o!
+0;"
+xq#
+0F"
+xp#
+0Q"
+xo#
+0\"
+xn#
+0g"
+xm#
+0r"
+xs#
+xt#
+xr#
+xX!
+x;"
+xo!
+0=#
+xr"
+0>#
+xg"
+0?#
+x\"
+0@#
+xQ"
+0A#
+xF"
+0D#
+0C#
+0B#
+xA#
+x@#
+x?#
+x>#
+x=#
+xC#
+xD#
+xB#
+#4000000
+0!
+0K
+0N!
+0!!
+0d!
+0-!
+0O!
+0e!
+#5000000
+1!
+1K
+1N!
+1!!
+0c!
+1d!
+x'"
+1-!
+x[!
+x]!
+xa!
+xh!
+x("
+xs"
+0d!
+1O!
+x%!
+xo
+xs
+xw
+x)!
+0-!
+1e!
+0Q!
+x3#
+xW!
+x0#
+0#"
+x%"
+0,"
+x2#
+06"
+x/#
+0e!
+xt"
+xi!
+xb!
+x^!
+x\!
+0-"
+0l!
+0$"
+xy!
+#6000000
+0!
+0K
+0N!
+0!!
+0[!
+0]!
+0a!
+0h!
+0s"
+0%!
+0o
+0s
+0w
+0)!
+0O!
+0t"
+0i!
+0b!
+0^!
+0\!
+#7000000
+1!
+1K
+1N!
+1!!
+x[!
+x]!
+xa!
+xh!
+x)"
+xs"
+x%!
+xo
+xs
+xw
+x)!
+xR!
+x!"
+x*"
+1O!
+x{
+xP!
+x+"
+x""
+x5"
+xt"
+xi!
+xb!
+x^!
+x\!
+0W!
+00#
+0%"
+02#
+xS!
+1&"
+0y!
+#8000000
+0!
+0K
+0N!
+0!!
+0R!
+0[!
+0]!
+0a!
+0h!
+0s"
+0{
+0%!
+0o
+0s
+0w
+0)!
+0O!
+0t"
+0i!
+0b!
+0^!
+0\!
+0S!
+#9000000
+1!
+1K
+1N!
+1!!
+xR!
+x[!
+x]!
+xa!
+xc!
+xh!
+1'"
+xs"
+x{
+x%!
+xo
+xs
+xw
+x)!
+0V!
+0[!
+0]!
+0a!
+0h!
+0("
+0s"
+xd!
+1O!
+0%!
+0o
+0s
+0w
+0)!
+x-!
+07"
+xS!
+xt"
+xi!
+xb!
+x^!
+x\!
+xQ!
+03#
+x#"
+x,"
+x6"
+xe!
+0t"
+0i!
+0b!
+0^!
+0\!
+xV!
+x-"
+xl!
+x$"
+x7"
+x&"
+#10000000
+0!
+0K
+0N!
+0!!
+0R!
+0d!
+0{
+0-!
+0O!
+0e!
+0S!
+#11000000
+1!
+1K
+1N!
+1!!
+xR!
+xd!
+x'"
+0)"
+x{
+x-!
+0R!
+0!"
+0*"
+x[!
+x]!
+xa!
+xh!
+x("
+xs"
+1O!
+0{
+x%!
+xo
+xs
+xw
+x)!
+0P!
+0+"
+0""
+05"
+xe!
+xS!
+x3#
+xW!
+x0#
+x%"
+x2#
+xt"
+xi!
+xb!
+x^!
+x\!
+0S!
+xy!
+#12000000
+0!
+0K
+0N!
+0!!
+0[!
+0]!
+0a!
+0d!
+0h!
+0s"
+0%!
+0o
+0s
+0-!
+0w
+0)!
+0O!
+0t"
+0i!
+0e!
+0b!
+0^!
+0\!
+#13000000
+1!
+1K
+1N!
+1!!
+x[!
+x]!
+xa!
+0c!
+xd!
+xh!
+x)"
+xs"
+x%!
+xo
+xs
+x-!
+xw
+x)!
+xR!
+x!"
+x*"
+0d!
+1O!
+x{
+0-!
+xP!
+x+"
+x""
+x5"
+xt"
+xi!
+xb!
+x^!
+x\!
+xe!
+0Q!
+0#"
+0,"
+06"
+0e!
+xS!
+0-"
+0l!
+0$"
+#14000000
+0!
+0K
+0N!
+0!!
+0R!
+0[!
+0]!
+0a!
+0h!
+0s"
+0{
+0%!
+0o
+0s
+0w
+0)!
+0O!
+0t"
+0i!
+0b!
+0^!
+0\!
+0S!
+#15000000
+1!
+1K
+1N!
+1!!
+xR!
+x[!
+x]!
+xa!
+xc!
+xh!
+xs"
+x{
+x%!
+xo
+xs
+xw
+x)!
+xd!
+1O!
+x-!
+xt"
+xi!
+xb!
+x^!
+x\!
+xS!
+xQ!
+0W!
+00#
+x#"
+0%"
+x,"
+02#
+x6"
+xe!
+x-"
+xl!
+x$"
+0y!
+#16000000
