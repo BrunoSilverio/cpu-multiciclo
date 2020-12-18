@@ -1,0 +1,141 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Ri[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Ri[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Ri[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Ri[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Ri[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Ri[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Ri[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Ri[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Rj[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Rj[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Rj[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Rj[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Rj[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Rj[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Rj[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Rj[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Rk[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Rk[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Rk[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Rk[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Rk[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Rk[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Rk[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Rk[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Rx[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Rx[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Rx[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Rx[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Rx[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Rx[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Rx[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Rx[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Clock",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,10 @@
+
+State Machine - |CPU|UnidadeControl:ContrUnit|NextStage
+Name NextStage.exec_i NextStage.mov_i NextStage.mov NextStage.complete NextStage.exec NextStage.decode NextStage.fetch 
+NextStage.fetch 0 0 0 0 0 0 0 
+NextStage.decode 0 0 0 0 0 1 1 
+NextStage.exec 0 0 0 0 1 0 1 
+NextStage.complete 0 0 0 1 0 0 1 
+NextStage.mov 0 0 1 0 0 0 1 
+NextStage.mov_i 0 1 0 0 0 0 1 
+NextStage.exec_i 1 0 0 0 0 0 1 
