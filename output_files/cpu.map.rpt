@@ -1,0 +1,712 @@
+Analysis & Synthesis report for cpu
+Thu Nov 05 16:12:59 2020
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |CPU|UnidadeControl:ContrUnit|NextStage
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Port Connectivity Checks: "UnidadeControl:ContrUnit"
+ 15. Port Connectivity Checks: "Mux4:MuxUlaB"
+ 16. Port Connectivity Checks: "Mux4:MuxUlaA"
+ 17. Port Connectivity Checks: "Register16:RegInst"
+ 18. Port Connectivity Checks: "Register8:PC"
+ 19. Port Connectivity Checks: "Register8:RegAux"
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Nov 05 16:12:59 2020       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; cpu                                         ;
+; Top-level Entity Name              ; CPU                                         ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 214                                         ;
+;     Total combinational functions  ; 212                                         ;
+;     Dedicated logic registers      ; 21                                          ;
+; Total registers                    ; 21                                          ;
+; Total pins                         ; 33                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE6E22A7        ;                    ;
+; Top-level entity name                                            ; cpu                ; cpu                ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                         ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
+; UnidadeControl.vhd               ; yes             ; User VHDL File  ; C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/UnidadeControl.vhd   ;         ;
+; ula.vhd                          ; yes             ; User VHDL File  ; C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/ula.vhd              ;         ;
+; Register8.vhd                    ; yes             ; User VHDL File  ; C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register8.vhd        ;         ;
+; Register16.vhd                   ; yes             ; User VHDL File  ; C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register16.vhd       ;         ;
+; Mux4.vhd                         ; yes             ; User VHDL File  ; C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux4.vhd             ;         ;
+; Mux2.vhd                         ; yes             ; User VHDL File  ; C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux2.vhd             ;         ;
+; DataMemory.vhd                   ; yes             ; User VHDL File  ; C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/DataMemory.vhd       ;         ;
+; cpu.vhd                          ; yes             ; User VHDL File  ; C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/cpu.vhd              ;         ;
+; bancoRegistrador.vhd             ; yes             ; User VHDL File  ; C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 214         ;
+;                                             ;             ;
+; Total combinational functions               ; 212         ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 33          ;
+;     -- 3 input functions                    ; 153         ;
+;     -- <=2 input functions                  ; 26          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 204         ;
+;     -- arithmetic mode                      ; 8           ;
+;                                             ;             ;
+; Total registers                             ; 21          ;
+;     -- Dedicated logic registers            ; 21          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 33          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; Clock~input ;
+; Maximum fan-out                             ; 60          ;
+; Total fan-out                               ; 749         ;
+; Average fan-out                             ; 2.51        ;
++---------------------------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                          ;
++--------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+------------------+--------------+
+; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name            ; Entity Name      ; Library Name ;
++--------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+------------------+--------------+
+; |CPU                           ; 212 (0)             ; 21 (0)                    ; 0           ; 0            ; 0       ; 0         ; 33   ; 0            ; |CPU                           ; CPU              ; work         ;
+;    |BancoRegistrador:BancoReg| ; 69 (69)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|BancoRegistrador:BancoReg ; BancoRegistrador ; work         ;
+;    |DataMemory:DataMem|        ; 7 (7)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DataMemory:DataMem        ; DataMemory       ; work         ;
+;    |Mux2:MuxRegData|           ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Mux2:MuxRegData           ; Mux2             ; work         ;
+;    |Mux4:MuxUlaA|              ; 24 (24)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Mux4:MuxUlaA              ; Mux4             ; work         ;
+;    |Mux4:MuxUlaB|              ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Mux4:MuxUlaB              ; Mux4             ; work         ;
+;    |Register16:RegInst|        ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Register16:RegInst        ; Register16       ; work         ;
+;    |Register8:PC|              ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Register8:PC              ; Register8        ; work         ;
+;    |Register8:RegAux|          ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Register8:RegAux          ; Register8        ; work         ;
+;    |ULA:Alu|                   ; 41 (41)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:Alu                   ; ULA              ; work         ;
+;    |UnidadeControl:ContrUnit|  ; 13 (13)             ; 13 (13)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|UnidadeControl:ContrUnit  ; UnidadeControl   ; work         ;
++--------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |CPU|UnidadeControl:ContrUnit|NextStage                                                                                            ;
++--------------------+------------------+-----------------+---------------+--------------------+----------------+------------------+-----------------+
+; Name               ; NextStage.exec_i ; NextStage.mov_i ; NextStage.mov ; NextStage.complete ; NextStage.exec ; NextStage.decode ; NextStage.fetch ;
++--------------------+------------------+-----------------+---------------+--------------------+----------------+------------------+-----------------+
+; NextStage.fetch    ; 0                ; 0               ; 0             ; 0                  ; 0              ; 0                ; 0               ;
+; NextStage.decode   ; 0                ; 0               ; 0             ; 0                  ; 0              ; 1                ; 1               ;
+; NextStage.exec     ; 0                ; 0               ; 0             ; 0                  ; 1              ; 0                ; 1               ;
+; NextStage.complete ; 0                ; 0               ; 0             ; 1                  ; 0              ; 0                ; 1               ;
+; NextStage.mov      ; 0                ; 0               ; 1             ; 0                  ; 0              ; 0                ; 1               ;
+; NextStage.mov_i    ; 0                ; 1               ; 0             ; 0                  ; 0              ; 0                ; 1               ;
+; NextStage.exec_i   ; 1                ; 0               ; 0             ; 0                  ; 0              ; 0                ; 1               ;
++--------------------+------------------+-----------------+---------------+--------------------+----------------+------------------+-----------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                 ;
++------------------------------------------------------+-------------------------------------+------------------------+
+; Latch Name                                           ; Latch Enable Signal                 ; Free of Timing Hazards ;
++------------------------------------------------------+-------------------------------------+------------------------+
+; BancoRegistrador:BancoReg|R0[0]                      ; BancoRegistrador:BancoReg|R0[7]     ; yes                    ;
+; BancoRegistrador:BancoReg|R0[1]                      ; BancoRegistrador:BancoReg|R0[7]     ; yes                    ;
+; BancoRegistrador:BancoReg|R0[2]                      ; BancoRegistrador:BancoReg|R0[7]     ; yes                    ;
+; BancoRegistrador:BancoReg|R0[3]                      ; BancoRegistrador:BancoReg|R0[7]     ; yes                    ;
+; BancoRegistrador:BancoReg|R0[4]                      ; BancoRegistrador:BancoReg|R0[7]     ; yes                    ;
+; BancoRegistrador:BancoReg|R0[5]                      ; BancoRegistrador:BancoReg|R0[7]     ; yes                    ;
+; BancoRegistrador:BancoReg|R0[6]                      ; BancoRegistrador:BancoReg|R0[7]     ; yes                    ;
+; BancoRegistrador:BancoReg|R0[7]                      ; BancoRegistrador:BancoReg|R0[7]     ; yes                    ;
+; BancoRegistrador:BancoReg|R1[0]                      ; BancoRegistrador:BancoReg|Mux33     ; yes                    ;
+; BancoRegistrador:BancoReg|R1[1]                      ; BancoRegistrador:BancoReg|Mux33     ; yes                    ;
+; BancoRegistrador:BancoReg|R1[2]                      ; BancoRegistrador:BancoReg|Mux33     ; yes                    ;
+; BancoRegistrador:BancoReg|R1[3]                      ; BancoRegistrador:BancoReg|Mux33     ; yes                    ;
+; BancoRegistrador:BancoReg|R1[4]                      ; BancoRegistrador:BancoReg|Mux33     ; yes                    ;
+; BancoRegistrador:BancoReg|R1[5]                      ; BancoRegistrador:BancoReg|Mux33     ; yes                    ;
+; BancoRegistrador:BancoReg|R1[6]                      ; BancoRegistrador:BancoReg|Mux33     ; yes                    ;
+; BancoRegistrador:BancoReg|R1[7]                      ; BancoRegistrador:BancoReg|Mux33     ; yes                    ;
+; BancoRegistrador:BancoReg|R2[0]                      ; BancoRegistrador:BancoReg|Mux33     ; yes                    ;
+; BancoRegistrador:BancoReg|R2[1]                      ; BancoRegistrador:BancoReg|Mux33     ; yes                    ;
+; BancoRegistrador:BancoReg|R2[2]                      ; BancoRegistrador:BancoReg|Mux33     ; yes                    ;
+; BancoRegistrador:BancoReg|R2[3]                      ; BancoRegistrador:BancoReg|Mux33     ; yes                    ;
+; BancoRegistrador:BancoReg|R2[4]                      ; BancoRegistrador:BancoReg|Mux33     ; yes                    ;
+; BancoRegistrador:BancoReg|R2[5]                      ; BancoRegistrador:BancoReg|Mux33     ; yes                    ;
+; BancoRegistrador:BancoReg|R2[6]                      ; BancoRegistrador:BancoReg|Mux33     ; yes                    ;
+; BancoRegistrador:BancoReg|R2[7]                      ; BancoRegistrador:BancoReg|Mux33     ; yes                    ;
+; BancoRegistrador:BancoReg|R3[0]                      ; BancoRegistrador:BancoReg|Mux33     ; yes                    ;
+; BancoRegistrador:BancoReg|R3[1]                      ; BancoRegistrador:BancoReg|Mux33     ; yes                    ;
+; BancoRegistrador:BancoReg|R3[2]                      ; BancoRegistrador:BancoReg|Mux33     ; yes                    ;
+; BancoRegistrador:BancoReg|R3[3]                      ; BancoRegistrador:BancoReg|Mux33     ; yes                    ;
+; BancoRegistrador:BancoReg|R3[4]                      ; BancoRegistrador:BancoReg|Mux33     ; yes                    ;
+; BancoRegistrador:BancoReg|R3[5]                      ; BancoRegistrador:BancoReg|Mux33     ; yes                    ;
+; BancoRegistrador:BancoReg|R3[6]                      ; BancoRegistrador:BancoReg|Mux33     ; yes                    ;
+; BancoRegistrador:BancoReg|R3[7]                      ; BancoRegistrador:BancoReg|Mux33     ; yes                    ;
+; Mux2:MuxRegData|output[0]                            ; Clock                               ; yes                    ;
+; Register16:RegInst|Output[10]                        ; Register16:RegInst|process_0        ; yes                    ;
+; Register16:RegInst|Output[11]                        ; Register16:RegInst|process_0        ; yes                    ;
+; Mux2:MuxRegData|output[1]                            ; Clock                               ; yes                    ;
+; Mux2:MuxRegData|output[2]                            ; Clock                               ; yes                    ;
+; Mux2:MuxRegData|output[3]                            ; Clock                               ; yes                    ;
+; Mux2:MuxRegData|output[4]                            ; Clock                               ; yes                    ;
+; Mux2:MuxRegData|output[5]                            ; Clock                               ; yes                    ;
+; Mux2:MuxRegData|output[6]                            ; Clock                               ; yes                    ;
+; Mux2:MuxRegData|output[7]                            ; Clock                               ; yes                    ;
+; ULA:Alu|Res[0]                                       ; Clock                               ; yes                    ;
+; Register8:RegAux|Output[0]                           ; Register8:RegAux|process_0          ; yes                    ;
+; ULA:Alu|Res[1]                                       ; Clock                               ; yes                    ;
+; Register8:RegAux|Output[1]                           ; Register8:RegAux|process_0          ; yes                    ;
+; ULA:Alu|Res[2]                                       ; Clock                               ; yes                    ;
+; Register8:RegAux|Output[2]                           ; Register8:RegAux|process_0          ; yes                    ;
+; ULA:Alu|Res[3]                                       ; Clock                               ; yes                    ;
+; Register8:RegAux|Output[3]                           ; Register8:RegAux|process_0          ; yes                    ;
+; ULA:Alu|Res[4]                                       ; Clock                               ; yes                    ;
+; Register8:RegAux|Output[4]                           ; Register8:RegAux|process_0          ; yes                    ;
+; ULA:Alu|Res[5]                                       ; Clock                               ; yes                    ;
+; Register8:RegAux|Output[5]                           ; Register8:RegAux|process_0          ; yes                    ;
+; ULA:Alu|Res[6]                                       ; Clock                               ; yes                    ;
+; Register8:RegAux|Output[6]                           ; Register8:RegAux|process_0          ; yes                    ;
+; ULA:Alu|Res[7]                                       ; Clock                               ; yes                    ;
+; Register8:RegAux|Output[7]                           ; Register8:RegAux|process_0          ; yes                    ;
+; Mux4:MuxUlaB|output[0]                               ; Clock                               ; yes                    ;
+; Mux4:MuxUlaA|output[0]                               ; Clock                               ; yes                    ;
+; BancoRegistrador:BancoReg|readData1[0]               ; BancoRegistrador:BancoReg|process_0 ; yes                    ;
+; Register8:PC|Output[1]                               ; Register16:RegInst|process_0        ; yes                    ;
+; Register8:PC|Output[0]                               ; Register16:RegInst|process_0        ; yes                    ;
+; Register8:PC|Output[2]                               ; Register16:RegInst|process_0        ; yes                    ;
+; Register16:RegInst|Output[12]                        ; Register16:RegInst|process_0        ; yes                    ;
+; Register16:RegInst|Output[13]                        ; Register16:RegInst|process_0        ; yes                    ;
+; Register16:RegInst|Output[14]                        ; Register16:RegInst|process_0        ; yes                    ;
+; Register16:RegInst|Output[15]                        ; Register16:RegInst|process_0        ; yes                    ;
+; Mux4:MuxUlaB|output[1]                               ; Clock                               ; yes                    ;
+; Mux4:MuxUlaA|output[1]                               ; Clock                               ; yes                    ;
+; BancoRegistrador:BancoReg|readData1[1]               ; BancoRegistrador:BancoReg|process_0 ; yes                    ;
+; Mux4:MuxUlaB|output[2]                               ; Clock                               ; yes                    ;
+; Mux4:MuxUlaA|output[2]                               ; Clock                               ; yes                    ;
+; BancoRegistrador:BancoReg|readData1[2]               ; BancoRegistrador:BancoReg|process_0 ; yes                    ;
+; Mux4:MuxUlaB|output[3]                               ; Clock                               ; yes                    ;
+; Mux4:MuxUlaA|output[3]                               ; Clock                               ; yes                    ;
+; BancoRegistrador:BancoReg|readData1[3]               ; BancoRegistrador:BancoReg|process_0 ; yes                    ;
+; Mux4:MuxUlaB|output[4]                               ; Clock                               ; yes                    ;
+; Mux4:MuxUlaA|output[4]                               ; Clock                               ; yes                    ;
+; BancoRegistrador:BancoReg|readData1[4]               ; BancoRegistrador:BancoReg|process_0 ; yes                    ;
+; Mux4:MuxUlaB|output[5]                               ; Clock                               ; yes                    ;
+; Mux4:MuxUlaA|output[5]                               ; Clock                               ; yes                    ;
+; BancoRegistrador:BancoReg|readData1[5]               ; BancoRegistrador:BancoReg|process_0 ; yes                    ;
+; Mux4:MuxUlaB|output[6]                               ; Clock                               ; yes                    ;
+; Mux4:MuxUlaA|output[6]                               ; Clock                               ; yes                    ;
+; BancoRegistrador:BancoReg|readData1[6]               ; BancoRegistrador:BancoReg|process_0 ; yes                    ;
+; Mux4:MuxUlaB|output[7]                               ; Clock                               ; yes                    ;
+; Mux4:MuxUlaA|output[7]                               ; Clock                               ; yes                    ;
+; BancoRegistrador:BancoReg|readData1[7]               ; BancoRegistrador:BancoReg|process_0 ; yes                    ;
+; BancoRegistrador:BancoReg|readData2[0]               ; BancoRegistrador:BancoReg|process_0 ; yes                    ;
+; Register16:RegInst|Output[0]                         ; Register16:RegInst|process_0        ; yes                    ;
+; Register16:RegInst|Output[9]                         ; Register16:RegInst|process_0        ; yes                    ;
+; BancoRegistrador:BancoReg|readData2[1]               ; BancoRegistrador:BancoReg|process_0 ; yes                    ;
+; BancoRegistrador:BancoReg|readData2[2]               ; BancoRegistrador:BancoReg|process_0 ; yes                    ;
+; BancoRegistrador:BancoReg|readData2[3]               ; BancoRegistrador:BancoReg|process_0 ; yes                    ;
+; Register8:PC|Output[3]                               ; Register16:RegInst|process_0        ; yes                    ;
+; BancoRegistrador:BancoReg|readData2[4]               ; BancoRegistrador:BancoReg|process_0 ; yes                    ;
+; Register8:PC|Output[4]                               ; Register16:RegInst|process_0        ; yes                    ;
+; BancoRegistrador:BancoReg|readData2[5]               ; BancoRegistrador:BancoReg|process_0 ; yes                    ;
+; Register8:PC|Output[5]                               ; Register16:RegInst|process_0        ; yes                    ;
+; Number of user-specified and inferred latches = 105  ;                                     ;                        ;
++------------------------------------------------------+-------------------------------------+------------------------+
+Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-----------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                  ;
++---------------------------------------------+-------------------------------------------------------+
+; Register name                               ; Reason for Removal                                    ;
++---------------------------------------------+-------------------------------------------------------+
+; DataMemory:DataMem|InstructionOut[1..5,7,8] ; Stuck at GND due to stuck port data_in                ;
+; UnidadeControl:ContrUnit|IRWrite            ; Merged with UnidadeControl:ContrUnit|PCWrite          ;
+; UnidadeControl:ContrUnit|AluSrcA[0]         ; Merged with UnidadeControl:ContrUnit|PCWrite          ;
+; UnidadeControl:ContrUnit|AluSrcB[1]         ; Merged with UnidadeControl:ContrUnit|PCWrite          ;
+; DataMemory:DataMem|InstructionOut[12]       ; Merged with DataMemory:DataMem|InstructionOut[0]      ;
+; UnidadeControl:ContrUnit|PCWrite            ; Merged with UnidadeControl:ContrUnit|NextStage.decode ;
+; UnidadeControl:ContrUnit|NextStage.fetch    ; Merged with UnidadeControl:ContrUnit|RegWrite         ;
+; Total Number of Removed Registers = 13      ;                                                       ;
++---------------------------------------------+-------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 21    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; UnidadeControl:ContrUnit|RegWrite      ; 7       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; 1:1                ; 8 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |CPU|BancoRegistrador:BancoReg|Mux21    ;
+; 1:1                ; 8 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |CPU|BancoRegistrador:BancoReg|Mux31    ;
+; 1:1                ; 8 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |CPU|BancoRegistrador:BancoReg|Mux41    ;
+; 1:1                ; 8 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |CPU|BancoRegistrador:BancoReg|Mux48    ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |CPU|Mux4:MuxUlaA|Mux0                  ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |CPU|ULA:Alu|Mux4                       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|Mux4:MuxUlaB|Mux1                  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |CPU|UnidadeControl:ContrUnit|NextStage ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "UnidadeControl:ContrUnit" ;
++-------+-------+----------+---------------------------+
+; Port  ; Type  ; Severity ; Details                   ;
++-------+-------+----------+---------------------------+
+; reset ; Input ; Info     ; Stuck at GND              ;
++-------+-------+----------+---------------------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "Mux4:MuxUlaB"       ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; input3[7..1] ; Input ; Info     ; Stuck at GND ;
+; input3[0]    ; Input ; Info     ; Stuck at VCC ;
+; input4       ; Input ; Info     ; Stuck at GND ;
++--------------+-------+----------+--------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "Mux4:MuxUlaA" ;
++--------+-------+----------+--------------+
+; Port   ; Type  ; Severity ; Details      ;
++--------+-------+----------+--------------+
+; input3 ; Input ; Info     ; Stuck at GND ;
++--------+-------+----------+--------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "Register16:RegInst" ;
++-------+-------+----------+---------------------+
+; Port  ; Type  ; Severity ; Details             ;
++-------+-------+----------+---------------------+
+; clear ; Input ; Info     ; Stuck at GND        ;
++-------+-------+----------+---------------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "Register8:PC" ;
++-------+-------+----------+---------------+
+; Port  ; Type  ; Severity ; Details       ;
++-------+-------+----------+---------------+
+; clear ; Input ; Info     ; Stuck at GND  ;
++-------+-------+----------+---------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "Register8:RegAux" ;
++-------+-------+----------+-------------------+
+; Port  ; Type  ; Severity ; Details           ;
++-------+-------+----------+-------------------+
+; clear ; Input ; Info     ; Stuck at GND      ;
++-------+-------+----------+-------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 33                          ;
+; cycloneiii_ff         ; 21                          ;
+;     plain             ; 21                          ;
+; cycloneiii_lcell_comb ; 212                         ;
+;     arith             ; 8                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 7                           ;
+;     normal            ; 204                         ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 24                          ;
+;         3 data inputs ; 146                         ;
+;         4 data inputs ; 33                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 2.15                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Thu Nov 05 16:12:40 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cpu -c cpu
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file unidadecontrol.vhd
+    Info (12022): Found design unit 1: UnidadeControl-LogicFunction File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/UnidadeControl.vhd Line: 15
+    Info (12023): Found entity 1: UnidadeControl File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/UnidadeControl.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
+    Info (12022): Found design unit 1: ULA-LogicFunction File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/ula.vhd Line: 14
+    Info (12023): Found entity 1: ULA File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/ula.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file register8.vhd
+    Info (12022): Found design unit 1: Register8-LogicFunction File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register8.vhd Line: 12
+    Info (12023): Found entity 1: Register8 File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register8.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file register16.vhd
+    Info (12022): Found design unit 1: Register16-LogicFunction File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register16.vhd Line: 12
+    Info (12023): Found entity 1: Register16 File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register16.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux4.vhd
+    Info (12022): Found design unit 1: Mux4-LogicFunction File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux4.vhd Line: 12
+    Info (12023): Found entity 1: Mux4 File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux4.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file mux2.vhd
+    Info (12022): Found design unit 1: Mux2-LogicFunction File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux2.vhd Line: 12
+    Info (12023): Found entity 1: Mux2 File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux2.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file fulladd.vhd
+    Info (12022): Found design unit 1: fulladd-LogicFunction File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/fulladd.vhd Line: 8
+    Info (12023): Found entity 1: fulladd File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/fulladd.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file datamemory.vhd
+    Info (12022): Found design unit 1: DataMemory-dataArchitecture File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/DataMemory.vhd Line: 13
+    Info (12023): Found entity 1: DataMemory File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/DataMemory.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file cpu.vhd
+    Info (12022): Found design unit 1: CPU-LogicFunction File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/cpu.vhd Line: 11
+    Info (12023): Found entity 1: CPU File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/cpu.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file bancoregistrador.vhd
+    Info (12022): Found design unit 1: BancoRegistrador-behaviorBanco File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 16
+    Info (12023): Found entity 1: BancoRegistrador File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file adder.vhd
+    Info (12022): Found design unit 1: adder-LogicFunction File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/adder.vhd Line: 12
+    Info (12023): Found entity 1: adder File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/adder.vhd Line: 5
+Info (12127): Elaborating entity "cpu" for the top level hierarchy
+Info (12128): Elaborating entity "Register8" for hierarchy "Register8:RegAux" File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/cpu.vhd Line: 110
+Warning (10631): VHDL Process Statement warning at Register8.vhd(15): inferring latch(es) for signal or variable "Output", which holds its previous value in one or more paths through the process File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register8.vhd Line: 15
+Info (10041): Inferred latch for "Output[0]" at Register8.vhd(15) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register8.vhd Line: 15
+Info (10041): Inferred latch for "Output[1]" at Register8.vhd(15) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register8.vhd Line: 15
+Info (10041): Inferred latch for "Output[2]" at Register8.vhd(15) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register8.vhd Line: 15
+Info (10041): Inferred latch for "Output[3]" at Register8.vhd(15) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register8.vhd Line: 15
+Info (10041): Inferred latch for "Output[4]" at Register8.vhd(15) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register8.vhd Line: 15
+Info (10041): Inferred latch for "Output[5]" at Register8.vhd(15) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register8.vhd Line: 15
+Info (10041): Inferred latch for "Output[6]" at Register8.vhd(15) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register8.vhd Line: 15
+Info (10041): Inferred latch for "Output[7]" at Register8.vhd(15) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register8.vhd Line: 15
+Info (12128): Elaborating entity "Register16" for hierarchy "Register16:RegInst" File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/cpu.vhd Line: 112
+Warning (10492): VHDL Process Statement warning at Register16.vhd(20): signal "D" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register16.vhd Line: 20
+Warning (10631): VHDL Process Statement warning at Register16.vhd(15): inferring latch(es) for signal or variable "Output", which holds its previous value in one or more paths through the process File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register16.vhd Line: 15
+Info (10041): Inferred latch for "Output[0]" at Register16.vhd(15) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register16.vhd Line: 15
+Info (10041): Inferred latch for "Output[1]" at Register16.vhd(15) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register16.vhd Line: 15
+Info (10041): Inferred latch for "Output[2]" at Register16.vhd(15) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register16.vhd Line: 15
+Info (10041): Inferred latch for "Output[3]" at Register16.vhd(15) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register16.vhd Line: 15
+Info (10041): Inferred latch for "Output[4]" at Register16.vhd(15) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register16.vhd Line: 15
+Info (10041): Inferred latch for "Output[5]" at Register16.vhd(15) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register16.vhd Line: 15
+Info (10041): Inferred latch for "Output[6]" at Register16.vhd(15) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register16.vhd Line: 15
+Info (10041): Inferred latch for "Output[7]" at Register16.vhd(15) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register16.vhd Line: 15
+Info (10041): Inferred latch for "Output[8]" at Register16.vhd(15) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register16.vhd Line: 15
+Info (10041): Inferred latch for "Output[9]" at Register16.vhd(15) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register16.vhd Line: 15
+Info (10041): Inferred latch for "Output[10]" at Register16.vhd(15) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register16.vhd Line: 15
+Info (10041): Inferred latch for "Output[11]" at Register16.vhd(15) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register16.vhd Line: 15
+Info (10041): Inferred latch for "Output[12]" at Register16.vhd(15) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register16.vhd Line: 15
+Info (10041): Inferred latch for "Output[13]" at Register16.vhd(15) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register16.vhd Line: 15
+Info (10041): Inferred latch for "Output[14]" at Register16.vhd(15) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register16.vhd Line: 15
+Info (10041): Inferred latch for "Output[15]" at Register16.vhd(15) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register16.vhd Line: 15
+Info (12128): Elaborating entity "Mux2" for hierarchy "Mux2:MuxRegData" File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/cpu.vhd Line: 115
+Warning (10492): VHDL Process Statement warning at Mux2.vhd(21): signal "input1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux2.vhd Line: 21
+Warning (10492): VHDL Process Statement warning at Mux2.vhd(23): signal "input2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux2.vhd Line: 23
+Warning (10631): VHDL Process Statement warning at Mux2.vhd(14): inferring latch(es) for signal or variable "output", which holds its previous value in one or more paths through the process File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux2.vhd Line: 14
+Info (10041): Inferred latch for "output[0]" at Mux2.vhd(14) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux2.vhd Line: 14
+Info (10041): Inferred latch for "output[1]" at Mux2.vhd(14) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux2.vhd Line: 14
+Info (10041): Inferred latch for "output[2]" at Mux2.vhd(14) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux2.vhd Line: 14
+Info (10041): Inferred latch for "output[3]" at Mux2.vhd(14) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux2.vhd Line: 14
+Info (10041): Inferred latch for "output[4]" at Mux2.vhd(14) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux2.vhd Line: 14
+Info (10041): Inferred latch for "output[5]" at Mux2.vhd(14) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux2.vhd Line: 14
+Info (10041): Inferred latch for "output[6]" at Mux2.vhd(14) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux2.vhd Line: 14
+Info (10041): Inferred latch for "output[7]" at Mux2.vhd(14) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux2.vhd Line: 14
+Info (12128): Elaborating entity "Mux4" for hierarchy "Mux4:MuxUlaA" File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/cpu.vhd Line: 116
+Warning (10492): VHDL Process Statement warning at Mux4.vhd(19): signal "input1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux4.vhd Line: 19
+Warning (10492): VHDL Process Statement warning at Mux4.vhd(20): signal "input2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux4.vhd Line: 20
+Warning (10492): VHDL Process Statement warning at Mux4.vhd(21): signal "input3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux4.vhd Line: 21
+Warning (10492): VHDL Process Statement warning at Mux4.vhd(22): signal "input4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux4.vhd Line: 22
+Warning (10631): VHDL Process Statement warning at Mux4.vhd(14): inferring latch(es) for signal or variable "output", which holds its previous value in one or more paths through the process File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux4.vhd Line: 14
+Info (10041): Inferred latch for "output[0]" at Mux4.vhd(14) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux4.vhd Line: 14
+Info (10041): Inferred latch for "output[1]" at Mux4.vhd(14) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux4.vhd Line: 14
+Info (10041): Inferred latch for "output[2]" at Mux4.vhd(14) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux4.vhd Line: 14
+Info (10041): Inferred latch for "output[3]" at Mux4.vhd(14) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux4.vhd Line: 14
+Info (10041): Inferred latch for "output[4]" at Mux4.vhd(14) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux4.vhd Line: 14
+Info (10041): Inferred latch for "output[5]" at Mux4.vhd(14) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux4.vhd Line: 14
+Info (10041): Inferred latch for "output[6]" at Mux4.vhd(14) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux4.vhd Line: 14
+Info (10041): Inferred latch for "output[7]" at Mux4.vhd(14) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Mux4.vhd Line: 14
+Info (12128): Elaborating entity "BancoRegistrador" for hierarchy "BancoRegistrador:BancoReg" File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/cpu.vhd Line: 120
+Warning (10036): Verilog HDL or VHDL warning at bancoRegistrador.vhd(17): object "ROTHERS" assigned a value but never read File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 17
+Warning (10492): VHDL Process Statement warning at bancoRegistrador.vhd(22): signal "writeAdress" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 22
+Warning (10492): VHDL Process Statement warning at bancoRegistrador.vhd(24): signal "writeData" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 24
+Warning (10492): VHDL Process Statement warning at bancoRegistrador.vhd(26): signal "writeData" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 26
+Warning (10492): VHDL Process Statement warning at bancoRegistrador.vhd(28): signal "writeData" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 28
+Warning (10492): VHDL Process Statement warning at bancoRegistrador.vhd(30): signal "writeData" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 30
+Warning (10492): VHDL Process Statement warning at bancoRegistrador.vhd(37): signal "R0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 37
+Warning (10492): VHDL Process Statement warning at bancoRegistrador.vhd(39): signal "R1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 39
+Warning (10492): VHDL Process Statement warning at bancoRegistrador.vhd(41): signal "R2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 41
+Warning (10492): VHDL Process Statement warning at bancoRegistrador.vhd(43): signal "R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 43
+Warning (10492): VHDL Process Statement warning at bancoRegistrador.vhd(49): signal "R0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 49
+Warning (10492): VHDL Process Statement warning at bancoRegistrador.vhd(51): signal "R1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 51
+Warning (10492): VHDL Process Statement warning at bancoRegistrador.vhd(53): signal "R2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 53
+Warning (10492): VHDL Process Statement warning at bancoRegistrador.vhd(55): signal "R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 55
+Warning (10631): VHDL Process Statement warning at bancoRegistrador.vhd(19): inferring latch(es) for signal or variable "R0", which holds its previous value in one or more paths through the process File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Warning (10631): VHDL Process Statement warning at bancoRegistrador.vhd(19): inferring latch(es) for signal or variable "R1", which holds its previous value in one or more paths through the process File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Warning (10631): VHDL Process Statement warning at bancoRegistrador.vhd(19): inferring latch(es) for signal or variable "R2", which holds its previous value in one or more paths through the process File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Warning (10631): VHDL Process Statement warning at bancoRegistrador.vhd(19): inferring latch(es) for signal or variable "R3", which holds its previous value in one or more paths through the process File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Warning (10631): VHDL Process Statement warning at bancoRegistrador.vhd(19): inferring latch(es) for signal or variable "readData1", which holds its previous value in one or more paths through the process File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Warning (10631): VHDL Process Statement warning at bancoRegistrador.vhd(19): inferring latch(es) for signal or variable "readData2", which holds its previous value in one or more paths through the process File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "readData2[0]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "readData2[1]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "readData2[2]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "readData2[3]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "readData2[4]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "readData2[5]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "readData2[6]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "readData2[7]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "readData1[0]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "readData1[1]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "readData1[2]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "readData1[3]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "readData1[4]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "readData1[5]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "readData1[6]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "readData1[7]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "R3[0]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "R3[1]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "R3[2]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "R3[3]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "R3[4]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "R3[5]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "R3[6]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "R3[7]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "R2[0]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "R2[1]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "R2[2]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "R2[3]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "R2[4]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "R2[5]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "R2[6]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "R2[7]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "R1[0]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "R1[1]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "R1[2]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "R1[3]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "R1[4]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "R1[5]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "R1[6]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "R1[7]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "R0[0]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "R0[1]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "R0[2]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "R0[3]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "R0[4]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "R0[5]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "R0[6]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (10041): Inferred latch for "R0[7]" at bancoRegistrador.vhd(19) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/bancoRegistrador.vhd Line: 19
+Info (12128): Elaborating entity "DataMemory" for hierarchy "DataMemory:DataMem" File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/cpu.vhd Line: 121
+Info (12128): Elaborating entity "ULA" for hierarchy "ULA:Alu" File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/cpu.vhd Line: 122
+Warning (10631): VHDL Process Statement warning at ula.vhd(17): inferring latch(es) for signal or variable "Res", which holds its previous value in one or more paths through the process File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/ula.vhd Line: 17
+Info (10041): Inferred latch for "Res[0]" at ula.vhd(17) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/ula.vhd Line: 17
+Info (10041): Inferred latch for "Res[1]" at ula.vhd(17) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/ula.vhd Line: 17
+Info (10041): Inferred latch for "Res[2]" at ula.vhd(17) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/ula.vhd Line: 17
+Info (10041): Inferred latch for "Res[3]" at ula.vhd(17) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/ula.vhd Line: 17
+Info (10041): Inferred latch for "Res[4]" at ula.vhd(17) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/ula.vhd Line: 17
+Info (10041): Inferred latch for "Res[5]" at ula.vhd(17) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/ula.vhd Line: 17
+Info (10041): Inferred latch for "Res[6]" at ula.vhd(17) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/ula.vhd Line: 17
+Info (10041): Inferred latch for "Res[7]" at ula.vhd(17) File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/ula.vhd Line: 17
+Info (12128): Elaborating entity "UnidadeControl" for hierarchy "UnidadeControl:ContrUnit" File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/cpu.vhd Line: 123
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "Register16:RegInst|Output[0]" merged with LATCH primitive "Register16:RegInst|Output[12]" File: C:/Users/Pedro.DESKTOP-J36MF19/Desktop/Projeto2/Register16.vhd Line: 15
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 249 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 216 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 33 warnings
+    Info: Peak virtual memory: 4784 megabytes
+    Info: Processing ended: Thu Nov 05 16:12:59 2020
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:31
+
+
